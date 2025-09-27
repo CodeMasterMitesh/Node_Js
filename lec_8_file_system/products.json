@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Apple 17 Pro",
+    "price": 5000,
+    "modelYear": 2025
+  },
+  {
+    "name": "Sampsung",
+    "price": 1000,
+    "modelYear": 2024
+  },
+  {
+    "name": "Nokia 360",
+    "price": 3000,
+    "modelYear": 2022
+  },
+  {
+    "name": "Vivo 1212",
+    "price": 5000,
+    "modelYear": 2023
+  },
+  {
+    "name": "Oppo 2022",
+    "price": 6000,
+    "modelYear": 2020
+  },
+  {
+    "name": "RealMe 2025",
+    "price": 1000,
+    "modelYear": 1999
+  },
+  {
+    "name": "Apple 7 Pro",
+    "price": 2000,
+    "modelYear": 1999
+  },
+  {
+    "name": "Nothing",
+    "price": 3000,
+    "modelYear": 2025
+  }
+]
