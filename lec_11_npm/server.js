@@ -35,7 +35,7 @@ const server = http.createServer((req,res)=>{
     }else if(req.url == "/contact"){
 
             res.writeHead(200,{"content-type":"text/plain"});
-            res.write("This is All About Company Contact Page");
+            res.write("Company Page Details");
             res.end();
     }else{
         res.writeHead(404,{"content-type":"text/plain"});
