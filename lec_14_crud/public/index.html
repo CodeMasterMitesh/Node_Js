@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h3>Student Registration</h3>
+      </div>
+      <div class="card-body">
+        <form action="/studentRegData" method="POST">
+          <!-- First & Last Name -->
+          <div class="row mb-3">
+            <div class="col">
+              <label for="firstname" class="form-label">First Name</label>
+              <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Enter first name" required>
+            </div>
+            <div class="col">
+              <label for="lastname" class="form-label">Last Name</label>
+              <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Enter last name" required>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter email" required>
+          </div>
+
+          <!-- Address -->
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <textarea id="address" class="form-control" name="address" rows="2" placeholder="Enter address" required></textarea>
+          </div>
+
+          <!-- Mobile -->
+          <div class="mb-3">
+            <label for="mobile" class="form-label">Mobile</label>
+            <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="Enter mobile number" required>
+          </div>
+
+          <!-- Education -->
+          <div class="mb-3">
+            <label for="education" class="form-label">Education</label>
+            <select id="education" name="education" class="form-control form-select" required>
+              <option value="">Select education</option>
+              <option value="High School">High School</option>
+              <option value="Bachelor's">Bachelor's</option>
+              <option value="Master's">Master's</option>
+              <option value="PhD">PhD</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- Hobby -->
+          <div class="mb-3">
+            <label class="form-label">Hobby</label><br>
+            <div class="form-check">
+              <input class="form-check-input" name="hobby[]" type="checkbox" id="hobby1" value="Reading">
+              <label class="form-check-label" for="hobby1">Reading</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" name="hobby[]" type="checkbox" id="hobby2" value="Sports">
+              <label class="form-check-label" for="hobby2">Sports</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" name="hobby[]" type="checkbox" id="hobby3" value="Music">
+              <label class="form-check-label" for="hobby3">Music</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" name="hobby[]" type="checkbox" id="hobby4" value="Travel">
+              <label class="form-check-label" for="hobby4">Travel</label>
+            </div>
+          </div>
+
+          <!-- Username -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Enter username" required>
+          </div>
+
+          <!-- Password -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" required>
+          </div>
+
+          <!-- Submit -->
+          <div class="d-grid">
+            <button type="submit" class="btn">Register</button>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <small>Already registered? <a href="/login">Login here</a></small>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

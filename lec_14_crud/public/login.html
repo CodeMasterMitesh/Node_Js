@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-card-header">
+        <h3>Student Login</h3>
+      </div>
+      <div class="login-card-body">
+        <form action="" method="POST">
+          <!-- Username -->
+          <div>
+            <label for="username" class="login-form-label">Username</label>
+            <input type="text" id="username" class="login-form-control" name="username" placeholder="Enter username" required>
+          </div>
+
+          <!-- Password -->
+          <div>
+            <label for="password" class="login-form-label">Password</label>
+            <input type="password" id="password" name="password" class="login-form-control" placeholder="Enter password" required>
+          </div>
+
+          <!-- Remember Me -->
+          <div class="login-form-check">
+            <input type="checkbox" class="login-form-check-input" id="remember">
+            <label class="login-form-check-label" for="remember">Remember Me</label>
+          </div>
+
+          <!-- Submit -->
+          <div>
+            <button type="submit" class="login-btn">Login</button>
+          </div>
+        </form>
+      </div>
+      <div class="login-card-footer">
+        <div class="login-footer-text">Don't have an account? <a href="/" class="login-link">Register here</a></div>
+        <a href="#" class="login-link small">Forgot Password?</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

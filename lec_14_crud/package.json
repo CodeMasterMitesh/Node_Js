@@ -1,0 +1,21 @@
+{
+  "name": "node_js_batch_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "t.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeMasterMitesh/Node_Js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeMasterMitesh/Node_Js/issues"
+  },
+  "homepage": "https://github.com/CodeMasterMitesh/Node_Js#readme"
+}
