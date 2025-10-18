@@ -1,0 +1,119 @@
+insertOne and insertManny
+db.students.insertOne({
+	"name" : "Viraj",
+	"lastanme" : 1,
+	"DOB" : ISODate("2025-10-17T08:47:05Z"),
+	"age":"Patel",
+	"per" : 65.98,
+	"mobile":9876543210,
+	"education":"B.SC",
+	"married":false,
+	"hobbies" : ["Swiming","Reading Book","Watching Movie"],
+	"address" : {
+		"houseno":"A-20",
+		"area" : "Krishnanagar",
+		"city":"Ahmedabad",
+		"state":"Gujarat",
+		"pincode":382345
+	}
+})
+
+db.students.insertMany([
+	{
+	"name" : "Chirag",
+	"lastanme" : "Chauhan",
+	"age":25,
+	"mobile":1234567890,
+	"education":"MBA",
+	},
+	{
+	"name" : "Sunny",
+	"lastanme" : "Paji",
+	"age":55,
+	"mobile":6543219870,
+	"hobby":"Watching Movie",
+	"email":"sunny@gmail.com",
+	},
+])
+
+ db.createCollection("users", 
+ { validator: 
+	{ $jsonSchema: 
+		{ bsonType: "object", 
+		  required: ["name","email", "age"], 
+			properties: 
+			{ name: 
+				{ 
+				 bsonType: "string", 
+				 description: "Name must be a string" 
+				},
+			email: { 
+				bsonType: "string", 
+				pattern: "^.+@.+\\..+$", 
+				description: "Valid email required" }, 
+			age: {
+                bsonType: "int", 
+				minimum: 18, 
+				maximum: 100, 
+				description: "Age must be 18-100" }, 
+			isActive: {
+            bsonType: "bool", 
+			description: "Boolean field" 
+			} 
+		} 
+	} 
+  }, validationLevel: "strict", validationAction: "error"
+ })
+ 
+ db.users.insertOne({
+	"name" : "Bhavin",
+	"email" : "1",
+	"age":"25",
+	"isActive":true,
+})
+
+db.users.insertOne({
+	"name" : "Suraj",
+	"email" : "Suraj@gmail.com",
+	"age":35,
+	"isActive":true,
+})
+
+$set -> update value 
+$rename -> rename field name
+
+db.users.updateMany(
+	{},
+	{ $rename:{"email":"emailId"}}
+)
+
+
+db.runCommand({
+  collMod: "users",
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["name", "age","emailId"], // 'email' is removed
+      properties: 
+			{ name: 
+				{ 
+				 bsonType: "string", 
+				 description: "Name must be a string" 
+				},
+			emailId: { 
+				bsonType: "string", 
+				pattern: "^.+@.+\\..+$", 
+				description: "Valid email required" }, 
+			age: {
+                bsonType: "int", 
+				minimum: 18, 
+				maximum: 100, 
+				description: "Age must be 18-100" }, 
+			isActive: {
+            bsonType: "bool", 
+			description: "Boolean field" 
+			} 
+		} 
+    }
+  }
+})
